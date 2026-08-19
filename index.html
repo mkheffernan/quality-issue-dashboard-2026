@@ -159,6 +159,7 @@ a.photo-link:hover{text-decoration:underline}
         <button class="tab" onclick="switchTab('mens')">🔵 Men's</button>
         <button class="tab" onclick="switchTab('womens')">🟡 Women's</button>
         <button class="tab" onclick="switchTab('all')">📋 All data</button>
+        <button class="tab" onclick="switchTab('deepdive')">📈 Q2 2026 Deep Dive</button>
       </div>
     </div>
   </div>
@@ -628,13 +629,314 @@ function rebuildDashboard(){
 }
 
 function switchTab(id){
-  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',['overview','mens','womens','all'][i]===id));
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',['overview','mens','womens','all','deepdive'][i]===id));
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
   document.getElementById('view-'+id).classList.add('active');
 }
 
 rebuildDashboard();
 </script>
+
+  <!-- DEEP DIVE -->
+  <div id="view-deepdive" class="view">
+    <div style="margin-bottom:1.5rem">
+      <h2 style="font-size:16px;font-weight:500;color:var(--ml-navy);margin-bottom:4px">Q2 2026 Customer Feedback Deep Dive</h2>
+      <p style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">Return rate by category · year-over-year comparison</p>
+    </div>
+
+    <!-- ROWS 1+2: unified 2-column grid so all cards share equal column widths -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0">
+
+      <!-- Men's reasons -->
+      <div class="card" style="min-width:0;overflow:hidden">
+        <h3>🔵 Men's — top return reasons</h3>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It just didn't fit">It just didn't fit</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:100%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">6,363</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="The body was too big">The body was too big</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:87%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">5,552</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I didn't like the color/pattern">I didn't like the color/pattern</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:59%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">3,777</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I changed my mind">I changed my mind</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:52%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">3,324</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was too small in the body">It was too small in the body</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:44%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">2,827</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I didn't like the fabric">I didn't like the fabric</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:43%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">2,755</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was too long">It was too long</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:23%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">1,441</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I purchased multiple sizes">I purchased multiple sizes</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:19%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">1,232</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was too short">It was too short</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:13%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">840</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It didn't wear well/quality issue">It didn't wear well/quality issue</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:5%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">311</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="Too expensive">Too expensive</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:5%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">307</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was damaged when I got it">It was damaged when I got it</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:4%;height:100%;background:#5BB8F5;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">279</div>
+        </div>
+      </div>
+      <div class="card" style="min-width:0;overflow:hidden">
+        <h3>🟡 Women's — top return reasons</h3>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It just didn't fit">It just didn't fit</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:100%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">10,568</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="The body was too big">The body was too big</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:84%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">8,913</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I changed my mind">I changed my mind</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:48%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">5,085</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I didn't like the color/pattern">I didn't like the color/pattern</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:44%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">4,632</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I didn't like the fabric">I didn't like the fabric</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:38%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">3,987</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was too small in the body">It was too small in the body</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:36%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">3,817</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="I purchased multiple sizes">I purchased multiple sizes</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:16%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">1,652</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was too long">It was too long</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:15%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">1,585</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was too short">It was too short</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:15%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">1,583</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="Too expensive">Too expensive</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:5%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">559</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It was damaged when I got it">It was damaged when I got it</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:3%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">315</div>
+        </div><div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+          <div style="font-size:11px;color:var(--muted);min-width:200px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="It didn't wear well/quality issue">It didn't wear well/quality issue</div>
+          <div style="flex:1;background:#f0eeeb;border-radius:3px;height:13px;overflow:hidden"><div style="width:3%;height:100%;background:#F5D76E;border-radius:3px"></div></div>
+          <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);min-width:42px;text-align:right">288</div>
+        </div>
+      </div>
+
+    <!-- ROW 2: rate tables continue in same grid -->
+      <div class="card" style="min-width:0;overflow:hidden">
+      <h3>🔵 Men's — return rate by category</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr>
+            <th style="min-width:160px">Category</th>
+            <th style="text-align:right;min-width:80px">Q2 '26 Ord</th>
+            <th style="text-align:right;min-width:80px">Q2 '26 Ret</th>
+            <th style="min-width:120px">Q2 '26 Rate</th>
+            <th style="text-align:right;min-width:80px">Q2 '25 Ord</th>
+            <th style="text-align:right;min-width:80px">Q2 '25 Ret</th>
+            <th style="min-width:120px">Q2 '25 Rate</th>
+            <th style="text-align:center;min-width:75px">YoY</th>
+          </tr></thead>
+          <tbody><tr>
+          <td style="font-weight:500;font-size:12px">Outerwear - Jackets</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,674</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,270</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:63%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">34.6%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,130</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,330</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:59%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">32.2%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#c0392b">▲ 2.4pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Bottoms - Pants</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">23,871</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">6,752</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:51%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">28.3%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">17,663</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">5,041</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:52%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">28.5%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#888">→ -0.2pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Wovens - Longsleeve</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">15,849</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,875</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:44%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">24.4%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">14,007</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,384</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:44%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">24.2%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#888">→ +0.2pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Longsleeve - Lightweight</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,161</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">763</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:44%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">24.1%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,217</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">640</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:36%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">19.9%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#c0392b">▲ 4.2pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Wovens - Shortsleeve</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">26,194</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">5,988</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:42%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">22.9%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">21,894</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,682</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:39%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">21.4%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#c0392b">▲ 1.5pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Longsleeve - Heavyweight</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,408</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">980</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:40%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">22.2%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,187</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">536</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:45%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">24.5%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#27ae60">▼ 2.3pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Outerwear - Dress</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">12,721</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,815</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:40%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">22.1%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">10,884</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,314</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:39%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">21.3%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#888">→ +0.8pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Active - Bottoms</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">17,477</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,328</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:35%;height:100%;background:#5BB8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">19.0%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">10,304</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,762</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:31%;height:100%;background:#A8D8F5;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">17.1%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#c0392b">▲ 1.9pp</span></td>
+        </tr></tbody>
+        </table>
+      </div>
+    </div>
+      <div class="card" style="min-width:0;overflow:hidden">
+      <h3>🟡 Women's — return rate by category</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr>
+            <th style="min-width:160px">Category</th>
+            <th style="text-align:right;min-width:80px">Q2 '26 Ord</th>
+            <th style="text-align:right;min-width:80px">Q2 '26 Ret</th>
+            <th style="min-width:120px">Q2 '26 Rate</th>
+            <th style="text-align:right;min-width:80px">Q2 '25 Ord</th>
+            <th style="text-align:right;min-width:80px">Q2 '25 Ret</th>
+            <th style="min-width:120px">Q2 '25 Rate</th>
+            <th style="text-align:center;min-width:75px">YoY</th>
+          </tr></thead>
+          <tbody><tr>
+          <td style="font-weight:500;font-size:12px">Outerwear - Jackets</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,085</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,920</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:85%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">47.0%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,648</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,283</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:89%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">49.1%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#27ae60">▼ 2.1pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Bottoms - Pants</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">25,537</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">10,120</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:72%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">39.6%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">24,627</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">10,390</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:77%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">42.2%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#27ae60">▼ 2.6pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Dresses - All</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">39,765</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">14,714</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:67%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">37.0%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">42,670</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">17,395</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:74%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">40.8%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#27ae60">▼ 3.8pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Swim - One Pieces</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,922</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,776</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:66%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">36.1%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">4,688</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,711</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:66%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">36.5%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#888">→ -0.4pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Bottoms - Skirts and Shorts</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">775</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">276</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:65%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">35.6%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">9,848</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">3,591</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:66%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">36.5%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#888">→ -0.9pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Bottoms - Skirts</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">6,133</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">1,966</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:58%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">32.1%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,006</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">830</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:75%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">41.4%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#27ae60">▼ 9.3pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Wovens - All</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">20,098</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">6,311</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:57%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">31.4%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">17,008</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">5,874</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:63%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">34.5%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#27ae60">▼ 3.1pp</span></td>
+        </tr><tr>
+          <td style="font-weight:500;font-size:12px">Bottoms :-Shorts</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">9,527</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,899</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:55%;height:100%;background:#F5D76E;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">30.4%</span></div></td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">2,159</td>
+          <td style="text-align:right;font-family:'DM Mono',monospace;font-size:11px">614</td>
+          <td><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;background:#f0eeeb;border-radius:3px;height:8px;overflow:hidden"><div style="width:52%;height:100%;background:#FAE9A8;border-radius:3px"></div></div><span style="font-family:'DM Mono',monospace;font-size:11px;min-width:36px">28.4%</span></div></td>
+          <td style="text-align:center;font-size:11px"><span style="color:#c0392b">▲ 2.0pp</span></td>
+        </tr></tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+
 <!-- SKU Modal -->
 <div id="sku-modal" style="display:none;position:fixed;inset:0;background:rgba(29,46,62,0.5);z-index:1000;align-items:center;justify-content:center;padding:1rem" onclick="if(event.target===this)closeModal()">
   <div style="background:#fff;border-radius:12px;max-width:860px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
